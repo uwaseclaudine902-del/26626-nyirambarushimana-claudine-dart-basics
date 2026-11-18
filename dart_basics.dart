@@ -163,6 +163,23 @@ void main() {
   drawTriangle(d + 3);
   drawTriangle(0);
   drawTriangle(-2);
+    // C4: Personal while loop
+  int c4x = d;
+  String result = '';
+
+  while (c4x > 0) {
+    if (c4x % 2 == 0) {
+      result += 'E';
+    } else {
+      result += 'O';
+    }
+
+    c4x -= 3;
+  }
+
+  print(result);
+  print(result.length);
+  print(result.isEmpty ? 'nothing' : result[0]);
 }
 
 
