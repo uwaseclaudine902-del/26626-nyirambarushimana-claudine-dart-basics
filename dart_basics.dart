@@ -18,7 +18,25 @@ int countVowels(String text) {
 
   return count;
 }
+// B3: Get initials from a full name
+String initials(String fullName) {
+  // by NC
+  String trimmedName = fullName.trim();
 
+  if (trimmedName.isEmpty) {
+    return '';
+  }
+
+  List<String> names = trimmedName.split(RegExp(r'\s+'));
+
+  String result = '';
+
+  for (String name in names) {
+    result += '${name[0].toUpperCase()}.';
+  }
+
+  return result;
+}
 void main() {
   // by NC
   print('Reg no: $regNo | D = $d | T = $t');
@@ -67,4 +85,8 @@ void main() {
   // B2: Count vowels in full name
   String fullName = 'Nyirambarushimana Claudine';
   print('$fullName has ${countVowels(fullName)} vowels');
+  // B3: Test initials
+  print(initials('Nyirambarushimana Claudine'));
+  print(initials(' ana uwase '));
+  print(initials(' '));
 }
