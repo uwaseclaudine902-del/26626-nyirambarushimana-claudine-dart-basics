@@ -116,5 +116,24 @@ void main() {
       print('Midweek');
     default:
       print('Weekend soon');
+
   }
+  // C3: Null-aware operators and do-while
+  int? bonus;
+
+  print(bonus ?? 50);
+
+  bonus ??= 70;
+  bonus ??= 90;
+
+  print(bonus);
+
+  int n = 10;
+
+  do {
+    print(n);
+    n += 3;
+  } while (n < 10);
 }
+
+
