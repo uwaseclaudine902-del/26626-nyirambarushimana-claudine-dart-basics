@@ -37,6 +37,31 @@ String initials(String fullName) {
 
   return result;
 }
+void drawTriangle(int height) {
+  // by NC
+  int row = 1;
+
+  while (row <= height) {
+    String line = '';
+    int spaces = height - row;
+
+    while (spaces > 0) {
+      line += ' ';
+      spaces--;
+    }
+
+    String symbol = row.isEven ? '#' : '*';
+    int column = 0;
+
+    while (column < row) {
+      line += symbol;
+      column++;
+    }
+
+    print(line);
+    row++;
+  }
+}
 void main() {
   // by NC
   print('Reg no: $regNo | D = $d | T = $t');
@@ -134,6 +159,10 @@ void main() {
     print(n);
     n += 3;
   } while (n < 10);
+    // C5: Draw triangle
+  drawTriangle(d + 3);
+  drawTriangle(0);
+  drawTriangle(-2);
 }
 
 
