@@ -89,4 +89,20 @@ void main() {
   print(initials('Nyirambarushimana Claudine'));
   print(initials(' ana uwase '));
   print(initials(' '));
+    // C1: Continue and Break
+  int number = 0;
+
+  while (number < 5) {
+    number++;
+
+    if (number == 2) {
+      continue;
+    }
+
+    if (number == 4) {
+      break;
+    }
+
+    print(number);
+  }
 }
