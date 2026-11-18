@@ -4,6 +4,21 @@ const String regNo = '26626';
 final int d = int.parse(regNo[regNo.length - 1]);
 final int t = int.parse(regNo.substring(regNo.length - 2));
 
+// B2: Count vowels
+int countVowels(String text) {
+  // by NC
+  int count = 0;
+  String lowerText = text.toLowerCase();
+
+  for (int i = 0; i < lowerText.length; i++) {
+    if ('aeiou'.contains(lowerText[i])) {
+      count++;
+    }
+  }
+
+  return count;
+}
+
 void main() {
   // by NC
   print('Reg no: $regNo | D = $d | T = $t');
@@ -28,7 +43,12 @@ void main() {
 
   z += x;
 
-  print(z);String city = 'Kigali';
+  print(z);
+  print(z.isEven);
+  print('$z' + '$x');
+
+  // B1: String operations
+  String city = 'Kigali';
 
   print(city.length);
   print(city[city.length - 1]);
@@ -37,13 +57,14 @@ void main() {
   print(city.contains('k'));
   print('$city.length');
   print('${city.length}');
-  print(city * 2);
+  print('$city$city');
   city.toUpperCase();
   print(city);
   print(city.replaceAll('i', '!'));
   print('5' + 5.toString());
   print(int.parse('5') + 5);
-  print(z.isEven);
-  print('$z' + '$x');
 
+  // B2: Count vowels in full name
+  String fullName = 'Nyirambarushimana Claudine';
+  print('$fullName has ${countVowels(fullName)} vowels');
 }
