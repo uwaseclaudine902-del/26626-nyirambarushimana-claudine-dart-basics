@@ -1,10 +1,15 @@
 26626-nyirambarushimana-claudine-dart-basics
+
 Student Information
- Name: Nyirambarushimana Claudine
+ 
+Name: Nyirambarushimana Claudine
+
 Registration Number: 26626
+
 Initials: NC
  D: 6
  T: 26
+
 Assignment Information
 
 * Title: Dart Basics – Variables, Strings, Control Flow & Functions
