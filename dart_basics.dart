@@ -106,25 +106,15 @@ void main() {
     print(number);
   }
     // C2: Switch statement
-  int day = 3;
+  int day = 2;
 
   switch (day) {
     case 1:
-      print('Monday');
-      break;
     case 2:
-      print('Tuesday');
-      break;
+      print('Early week');
     case 3:
-      print('Wednesday');
-      break;
-    case 4:
-      print('Thursday');
-      break;
-    case 5:
-      print('Friday');
-      break;
+      print('Midweek');
     default:
-      print('Invalid day');
+      print('Weekend soon');
   }
 }
