@@ -62,7 +62,39 @@ void drawTriangle(int height) {
     row++;
   }
 }
-void main() {
+int momoFee(int amount) {
+  // by NC
+  if (amount <= 0) {
+    return -1;
+  } else if (amount <= 1000) {
+    return 20;
+  } else if (amount <= 10000) {
+    return 100;
+  } else if (amount <= 150000) {
+    return 250;
+  } else {
+    return 1500;
+  }
+}
+  String maskPhone(String phone) {
+  // by NC
+  if (phone.length != 10) {
+    return 'INVALID';
+  }
+
+  String stars = '';
+  int i = 0;
+
+  while (i < phone.length - 5) {
+    stars += '*';
+    i++;
+  }
+  
+  return phone.substring(0, 3) +
+      stars +
+      phone.substring(phone.length - 2);
+  }
+  void main() {
   // by NC
   print('Reg no: $regNo | D = $d | T = $t');
 
@@ -180,6 +212,26 @@ void main() {
   print(result);
   print(result.length);
   print(result.isEmpty ? 'nothing' : result[0]);
+
+    // D2: MoMo receipt printer
+  int d2TotalFees = 0;
+  int d2i = 1;
+  String d2Phone = '0788123456';
+
+  while (d2i <= d + 3) {
+    int d2Amount = d2i * 4000 + t * 100;
+    int d2Fee = momoFee(d2Amount);
+
+    print(
+      'Receipt $d2i | $d2Amount RWF | '
+      'fee $d2Fee RWF | to ${maskPhone(d2Phone)}',
+    );
+
+    d2TotalFees += d2Fee;
+    d2i++;
+  }
+
+  print('Total fees: $d2TotalFees RWF');
 }
 
 
