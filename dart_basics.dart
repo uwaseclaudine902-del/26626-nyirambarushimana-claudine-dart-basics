@@ -1,14 +1,18 @@
 // Student: Nyirambarushimana Claudine
-// Reg no: 26626
+// Reg no:  26626
 const String regNo = '26626';
 final int d = int.parse(regNo[regNo.length - 1]);
 final int t = int.parse(regNo.substring(regNo.length - 2));
-// by NC
+
 void main() {
+  // by NC
   print('Reg no: $regNo | D = $d | T = $t');
-int a = 17;
+
+  // A1: Variables and operators
+  int a = 17;
   int b = 5;
- print(a / b);
+
+  print(a / b);
   print(a ~/ b);
   print(a % b);
   print(-a % b);
@@ -20,7 +24,6 @@ int a = 17;
   // A2: Personal numbers
   int x = d;
   int y = t;
-
   var z = x * 2 + y ~/ 4;
 
   z += x;
